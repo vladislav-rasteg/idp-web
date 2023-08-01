@@ -1,0 +1,22 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Inter';
+}
+
+.appWrapper{
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+@font-face {
+  font-family: Stapel;
+  src: url('./fonts/StapelLight.eot');
+  src: url('./fonts/StapelLight.woff') format('woff'),
+       url('./fonts/StapelLight.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
