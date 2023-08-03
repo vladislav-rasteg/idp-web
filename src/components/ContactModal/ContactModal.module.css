@@ -1,0 +1,136 @@
+.modal{
+    background: #121212;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    overflow: hidden;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 1290px;
+    gap: 42px;
+}   
+
+.closeButton{
+    width: 70px;
+    height: 70px;
+    border: none;
+    border-radius: 35px;
+    background: #FFFFFF;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.closeButton:hover{
+    transform: scale(1.1);
+    transition: 300ms;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+}
+
+.heading{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.heading h1{
+    color: #FFF;
+    font-family: Stapel;
+    font-size: 120px;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 0;
+}
+
+.headingButtons{
+    display: flex;
+    gap: 22px;
+    align-items: center;
+}
+
+.mailButton{
+    display: flex;
+    width: 343px;
+    height: 94px;
+    padding: 18px 32px;
+    border-radius: 30px;
+    border: 1px solid #FFF;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 300ms;
+}
+
+.mailButton:hover{
+    transform: scale(1.1);
+    background: #FFFFFF;
+    color: #000000;
+    transition: 300ms;
+}
+
+.telegramButton{
+    display: flex;
+    height: 94px;
+    width: 94px;
+    border-radius: 30px;
+    border: 1px solid #FFF;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 300ms;
+}
+
+.telegramButton:hover{
+    transform: scale(1.1);
+    transition: 300ms;
+}
+
+.sendButton{
+    display: flex;
+    width: 751px;
+    height: 90px;
+    padding: 32px 56px;
+    cursor: pointer;
+    background: #FFFFFF;
+    border-radius: 30px;
+    color: #000;
+    font-family: Inter;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    justify-content: center;
+    transition: 300ms;  
+}
+
+.sendButton:hover{
+    transform: scale(1.1);
+    transition: 300ms;
+}
+
+
+
+
+.hidden{
+    display: none;
+}
