@@ -321,7 +321,7 @@ const MainPage = () => {
                         </div>
                     </div>
 
-                    <button className={s.fullWidthButton}>Связаться с нами</button>
+                    <button onClick={() => setShow(true)} className={s.fullWidthButton}>Связаться с нами</button>
                 </div>
             </div>
             

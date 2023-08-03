@@ -2,8 +2,8 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import MainPage from './pages/MainPage.tsx/MainPage';
-import AboutPage from './pages/AboutPage.tsx/AboutPage';
+import MainPage from './pages/MainPage/MainPage';
+import AboutPage from './pages/AboutPage/AboutPage';
 
 function App() {
   return (
