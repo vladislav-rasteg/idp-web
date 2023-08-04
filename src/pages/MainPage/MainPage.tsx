@@ -7,6 +7,7 @@ import { ReactComponent as Card3 } from './assets/card3.svg'
 import { ReactComponent as Card4 } from './assets/card4.svg'
 import { ReactComponent as Card5 } from './assets/card5.svg'
 import { ReactComponent as ScrollAnimated } from './assets/scrollAnimated.svg'
+import { ReactComponent as FooterLogo } from './assets/footerLogo.svg'
 import Img1 from './assets/img1.png'
 import Img2 from './assets/img2.png'
 import Img3 from './assets/img3.png'
@@ -116,10 +117,10 @@ const MainPage = () => {
                     <Logo className={s.logo} />
                     <Reveal>
                         <div className={s.navbarLinks}>
-                            <a>О нас</a>
-                            <a>Отрасли</a>
-                            <a>Решения</a>
-                            <a>Услуги</a>
+                            <a href="#about">О нас</a>
+                            <a href="#cards">Отрасли</a>
+                            <a href="#solutions">Решения</a>
+                            <a href="#services">Услуги</a>
                         </div>
                     </Reveal>
                     <button onClick={() => setShow(true)}>Связаться</button>
@@ -151,7 +152,7 @@ const MainPage = () => {
                 </div>
             </div>
 
-            <div className={s.container}>
+            <div className={s.container} id="about">
                 <div className={s.block}>
                     <Reveal>
                         <h1 className={s.heading}>О нас</h1>
@@ -167,7 +168,7 @@ const MainPage = () => {
                 </div>
             </div>
 
-            <div className={s.container}>
+            <div className={s.container} id="cards">
                 <div className={s.block}>
                     <Reveal>
                         <h1 className={s.heading}>Отрасли</h1>
@@ -244,7 +245,7 @@ const MainPage = () => {
                 </div>
             </div>
 
-            <div className={s.darkContainer}>
+            <div className={s.darkContainer} id="solutions">
                 <div className={s.darkBlock}>
                     <div className={s.headingLines}>
                         <Divider rotation="horizontal" />
@@ -327,7 +328,7 @@ const MainPage = () => {
                 </motion.div>
             </div>
 
-            <div className={s.darkContainer}>
+            <div className={s.darkContainer} id="services">
                 <div className={s.darkBlock}>
                     <div className={s.servicesHeading}>
                         <div className={s.headingWrapper}>
@@ -369,7 +370,22 @@ const MainPage = () => {
                     <button onClick={() => setShow(true)} className={s.fullWidthButton}>Связаться с нами</button>
                 </div>
             </div>
-            
+            <div className={s.container}>
+             <div className={s.footer}>
+                <Reveal>
+                    <h1 onClick={() => setShow(true)} >Связаться с нами</h1>
+                </Reveal>
+                <div className={s.footerContent}>
+                    <FooterLogo />
+                    <div className={s.footerLinks}>
+                        <a>Проекты</a>
+                        <a>О нас</a>
+                        <a>Контакты</a>
+                    </div>
+
+                </div>
+             </div>
+            </div>
         </div>
         
     )
