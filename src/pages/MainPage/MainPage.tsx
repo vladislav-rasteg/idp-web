@@ -1,4 +1,4 @@
-import React, {useRef, useState} from "react"
+import React, {useRef, useState, useEffect} from "react"
 import s from './MainPage.module.css'
 import { ReactComponent as Logo } from '../../assets/logo.svg'
 import { ReactComponent as Card1 } from './assets/card1.svg'
@@ -26,12 +26,58 @@ import Divider from "../../components/Divider/Divider"
 import DividerGridVertical from "../../components/Divider/DividerGridVertical"
 import DividerGridHorizontal from "../../components/Divider/DividerGridHorizontal"
 import ContactModal from "../../components/ContactModal/ContactModal"
+import useWindowDimensions from '../../hooks/useWindowDimensions';
  
 const MainPage = () => {
+
+    const { height, width } = useWindowDimensions();
 
     const ref = useRef<HTMLDivElement>(null)
     const secondRef = useRef<HTMLDivElement>(null)
     const scrollingContainer = useRef<HTMLDivElement>(null)
+    const [containerWidth, setContainerWidth] = useState(1290)
+    const [marginWidth, setMarginWidth] = useState(630)
+
+    const [showNavbar, setShowNavbar] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
+
+    const controlNavbar = () => {
+        if (typeof window !== 'undefined') { 
+        if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
+            setShowNavbar(false); 
+        } else { // if scroll up show the navbar
+            setShowNavbar(true);  
+        }
+
+        // remember current page location to use in the next move
+        setLastScrollY(window.scrollY); 
+        }
+    };
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+        window.addEventListener('scroll', controlNavbar);
+
+        // cleanup function
+        return () => {
+            window.removeEventListener('scroll', controlNavbar);
+        };
+        }
+    }, [lastScrollY]);
+
+    useEffect(() => {
+        //2000px+ = 1900    1900px+ = 1720  1600px+ = 1430  1300px+ = 1290
+        if (width && width >= 1900){
+            setMarginWidth(840)
+            setContainerWidth(1720)
+        } else if (width && width >= 1600){
+            setMarginWidth(630)
+            setContainerWidth(1430)
+        } else if (width && width > 1300){
+            setMarginWidth(630)
+            setContainerWidth(1290)
+        }
+    }, [width])
 
     const [show, setShow] = useState(false)
 
@@ -50,12 +96,11 @@ const MainPage = () => {
         offset: ["0 1", "2 1"]
     })
 
-
     const margin = useTransform(useSpring(scrollYProgress, {
         stiffness: 200,
         damping: 30,
         restDelta: 0.001
-      }), [0, 1], ["0px", "-630px"])
+      }), [0, 1], ["0px", `-${marginWidth}px`])
 
     const right = useTransform(useSpring(scroll.scrollYProgress, {
         stiffness: 60,
@@ -66,7 +111,7 @@ const MainPage = () => {
     return (
         <div className={s.page} ref={scrollingContainer}>
             <ContactModal show={show} onHide={setShow} />
-            <div className={s.navbar}>
+            <div className={`${s.navbar} ${!showNavbar && s.navbarHide}`}>
                 <div className={s.navbarContent}>
                     <Logo className={s.logo} />
                     <Reveal>
@@ -96,7 +141,7 @@ const MainPage = () => {
                     
                     <motion.div 
                     initial={{opacity: 0, width: "0px"}}
-                    animate={{opacity: 1, width: "1290px"}}
+                    animate={{opacity: 1, width: `${containerWidth}px`}}
                     transition={{ duration: 0.7, delay: 0.8, ease: "easeOut" }}
                     className={s.videoWrapper}>
                         <video className={s.heroVideo} autoPlay={true} loop={true} controls={false} playsInline muted>
@@ -132,7 +177,7 @@ const MainPage = () => {
                         <Reveal>
                             <div className={s.card}>
                                 <div className={s.cardContent}>
-                                    <Card1 />
+                                    <Card1 className={s.cardImg} />
                                     <h2>банковский<br/>и финансовый<br/>сектор</h2>
                                 </div>
                                 <div className={s.moreWrapper}>
@@ -144,7 +189,7 @@ const MainPage = () => {
                         <Reveal>
                             <div className={s.card}>
                                 <div className={s.cardContent}>
-                                    <Card2 />
+                                    <Card2 className={s.cardImg} />
                                     <h2>государственный<br/>сектор</h2>
                                 </div>
                                 <div className={s.moreWrapper}>
@@ -156,8 +201,8 @@ const MainPage = () => {
                         <Reveal>
                             <div className={s.card}>
                                 <div className={s.cardContent}>
-                                    <Card3 />
-                                    <h2>транспортная<br/>и дорожная<br/>инфраструктура</h2>
+                                    <Card3 className={s.cardImg} />
+                                    <h2>транспорт<br/>и дорожная<br/>инфраструктура</h2>
                                 </div>
                                 <div className={s.moreWrapper}>
                                     <p>Подробнее</p>
@@ -168,7 +213,7 @@ const MainPage = () => {
                         <Reveal>
                             <div className={s.card}>
                                 <div className={s.cardContent}>
-                                    <Card4 />
+                                    <Card4 className={s.cardImg} />
                                     <h2>здравоохранение</h2>
                                 </div>
                                 <div className={s.moreWrapper}>
@@ -180,7 +225,7 @@ const MainPage = () => {
                         <Reveal>
                             <div className={s.card}>
                                 <div className={s.cardContent}>
-                                    <Card5 />
+                                    <Card5 className={s.cardImg} />
                                     <h2>ритейл</h2>
                                 </div>
                                 <div className={s.moreWrapper}>
@@ -262,10 +307,10 @@ const MainPage = () => {
             <div className={s.greenContainer}>
                 <div className={s.greenBlock}>
                     <h1>
-                    мы разрабатываем
-                    сверхкачественные
-                    решения, способные
-                    выдержать любую
+                    мы разрабатываем<br/>
+                    сверхкачественные<br/>
+                    решения, способные<br/>
+                    выдержать любую<br/>
                     нагрузку
                     </h1>
 
@@ -306,14 +351,14 @@ const MainPage = () => {
 
                     <div className={s.services}>
                         <div className={s.service}>
-                            <Ser1 />
+                            <Ser1 className={s.serviceImg} />
                             <div className={s.serviceText}>
                                 <h3>Разработка<br/>программного обеспечения</h3>
                                 <p>Мы не только разрабатываем ПО, но и обучаем его самоорганизовывать сети, вовремя передавать данные и реагировать на изменения окружающей среды. Мы умеем собирать данные, анализировать, предсказывать аномалии и знаем, как настроить искусственный интеллект работать на благо вашей цели.</p>
                             </div>
                         </div>
                         <div className={s.service}>
-                            <Ser2 />
+                            <Ser2 className={s.serviceImg} />
                             <div className={s.serviceText}>
                                 <h3>Приложения для<br/>мобильных платформ</h3>
                                 <p>Мы создаем индивидуальные программные решения для смартфонов, планшетов и других мобильных устройств с современным и эффективным UX/UI.</p>
