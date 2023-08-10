@@ -70,6 +70,12 @@
     line-height: 120%; /* 38.4px */
 }
 
+.phoneButton{
+    display: flex;
+    gap: 22px;
+    align-items: center;
+}
+
 .alignRight{
     width: 100%;
     display: flex;
@@ -501,13 +507,14 @@
 
 .footerLinks{
     display: flex;
-    gap: 100px;
+    gap: 46px;
     font-size: 22px;
 }
 
 .footerLinks a{
     cursor: pointer;
     text-decoration: none;
+    color: #000000;
 }
 
 

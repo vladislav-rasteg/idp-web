@@ -33,6 +33,13 @@
     transition: 300ms;
 }
 
+.contentWrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
 .content{
     display: flex;
     flex-direction: column;
@@ -41,7 +48,6 @@
 
 .heading{
     display: flex;
-    width: 100%;
     justify-content: space-between;
     align-items: center;
 }
@@ -56,7 +62,13 @@
     padding: 0;
 }
 
-.headingButtons{
+.contactButtons{
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.buttonsRow{
     display: flex;
     gap: 22px;
     align-items: center;
@@ -64,7 +76,25 @@
 
 .mailButton{
     display: flex;
-    width: 343px;
+    height: 94px;
+    padding: 18px 84px;
+    border-radius: 30px;
+    border: 1px solid #FFF;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 300ms;
+}
+
+.phoneButton{
+    display: flex;
+    width: 100%;
     height: 94px;
     padding: 18px 32px;
     border-radius: 30px;
@@ -78,6 +108,13 @@
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    transition: 300ms;
+}
+
+.phoneButton:hover{
+    transform: scale(1.1);
+    background: #FFFFFF;
+    color: #000000;
     transition: 300ms;
 }
 

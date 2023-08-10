@@ -123,7 +123,14 @@ const MainPage = () => {
                             <a href="#services">Услуги</a>
                         </div>
                     </Reveal>
-                    <button onClick={() => setShow(true)}>Связаться</button>
+                    <div className={s.phoneButton}>
+                        <Reveal>
+                            <div className={s.navbarLinks}>
+                                <a href="tel:+375297944933">+375 29 794-49-33</a>
+                            </div>
+                        </Reveal>
+                        <button onClick={() => setShow(true)}>Связаться</button>
+                    </div>
                 </div>
             </div>
             <div className={s.container}>
@@ -159,11 +166,11 @@ const MainPage = () => {
                     </Reveal>
                     
                     <Reveal>
-                        <p>Надежный партнер для вашего инновационного пути.<br/>
-                        Являясь глобальным поставщиком инженерных, технологических 
-                        и консалтинговых услуг, компания Expleo занимает идеальное
-                        положение для того, чтобы помочь вам реализовать свои
-                        амбиции и обеспечить будущее вашего бизнеса.</p>
+                        <p>IDP - Надежный спутник на вашем пути к инновациям.<br/>
+                        В роли мирового поставщика инженерных, технологических и
+                        консультационных услуг, IDP находится в идеальном положении,
+                        чтобы поддержать вас в осуществлении ваших замыслов и
+                        обеспечить будущее вашего бизнеса.</p>
                     </Reveal>
                 </div>
             </div>
@@ -181,10 +188,10 @@ const MainPage = () => {
                                     <Card1 className={s.cardImg} />
                                     <h2>банковский<br/>и финансовый<br/>сектор</h2>
                                 </div>
-                                <div className={s.moreWrapper}>
+                                {/* <div className={s.moreWrapper}>
                                     <p>Подробнее</p>
                                     <RowIcon />
-                                </div>    
+                                </div>     */}
                             </div>
                         </Reveal>
                         <Reveal>
@@ -193,10 +200,10 @@ const MainPage = () => {
                                     <Card2 className={s.cardImg} />
                                     <h2>государственный<br/>сектор</h2>
                                 </div>
-                                <div className={s.moreWrapper}>
+                                {/* <div className={s.moreWrapper}>
                                     <p>Подробнее</p>
                                     <RowIcon />
-                                </div>
+                                </div> */}
                             </div>
                         </Reveal>
                         <Reveal>
@@ -205,10 +212,10 @@ const MainPage = () => {
                                     <Card3 className={s.cardImg} />
                                     <h2>транспорт<br/>и дорожная<br/>инфраструктура</h2>
                                 </div>
-                                <div className={s.moreWrapper}>
+                                {/* <div className={s.moreWrapper}>
                                     <p>Подробнее</p>
                                     <RowIcon />
-                                </div>    
+                                </div>     */}
                             </div>
                         </Reveal>
                         <Reveal>
@@ -217,10 +224,10 @@ const MainPage = () => {
                                     <Card4 className={s.cardImg} />
                                     <h2>здравоохранение</h2>
                                 </div>
-                                <div className={s.moreWrapper}>
+                                {/* <div className={s.moreWrapper}>
                                     <p>Подробнее</p>
                                     <RowIcon />
-                                </div>
+                                </div> */}
                             </div>
                         </Reveal>
                         <Reveal>
@@ -229,10 +236,10 @@ const MainPage = () => {
                                     <Card5 className={s.cardImg} />
                                     <h2>ритейл</h2>
                                 </div>
-                                <div className={s.moreWrapper}>
+                                {/* <div className={s.moreWrapper}>
                                     <p>Подробнее</p>
                                     <RowIcon />
-                                </div>
+                                </div> */}
                             </div>
                         </Reveal>
                         <Reveal>
@@ -301,7 +308,8 @@ const MainPage = () => {
                         </Reveal>
                     </div>
 
-                    <button className={s.fullWidthButton}>Все решения</button>
+                    {/* <button className={s.fullWidthButton}>Все решения</button> */}
+                    <button onClick={() => setShow(true)} className={s.fullWidthButton}>Связаться с нами</button>
                 </div>
             </div>
 
@@ -378,9 +386,14 @@ const MainPage = () => {
                 <div className={s.footerContent}>
                     <FooterLogo />
                     <div className={s.footerLinks}>
-                        <a>Проекты</a>
-                        <a>О нас</a>
-                        <a>Контакты</a>
+                        <a href="tel:+375297944933">+375 29 794-49-33</a>
+                        <a href="mailto:info@idp.by">info@idp.by</a>
+                    </div>
+                    <div className={s.footerLinks}>
+                        <a href="#about">О нас</a>
+                        <a href="#cards">Отрасли</a>
+                        <a href="#solutions">Решения</a>
+                        <a href="#services">Услуги</a>
                     </div>
 
                 </div>

@@ -66,23 +66,29 @@ const ContactModal = ({show, onHide}: Props) => {
         >
             <div className={s.container}>
                 <button className={s.closeButton} onClick={() => onHide(false)}><Close /></button>
-                <div className={s.content}>
-                    <div className={s.heading}>
-                        <h1>СВЯЗАТЬСЯ</h1>
-                        <div className={s.headingButtons}>
-                            <a className={s.mailButton}>info@idp.by</a>
-                            <a className={s.telegramButton}><Telegram /></a>
+                <div className={s.contentWrapper}>
+                    <div className={s.content}>
+                        <div className={s.heading}>
+                            <h1>СВЯЗАТЬСЯ</h1>
                         </div>
+                        <Form id="contactForm" className={s.contactForm}>
+                            <Form.Control value={contactName} onChange={(e) => {setContactName(e.target.value)}} className={s.contactInput} placeholder="Ваше имя" />
+                            <Form.Control value={contactCompany} onChange={(e) => {setContactCompany(e.target.value)}} className={s.contactInput} type="phone" placeholder="Компания" />
+                            <Form.Control value={contactContact} onChange={(e) => {setContactContact(e.target.value)}} className={s.contactInput} type="mail" placeholder="Telegram, почта или телефон" />
+                            <Form.Control value={contactMessage} onChange={(e) => {setContactMessage(e.target.value)}} className={s.contactInput} placeholder="Опишите вашу задачу" />
+                            {contactSuccess && <p className={s.successContact} >{contactSuccess}</p>}
+                            {contactError && <p className={s.errorContact} >{contactError}</p>}
+                        </Form>
+                        <button className={s.sendButton} onClick={contactFormHandler}>Отправить</button>
                     </div>
-                    <Form id="contactForm" className={s.contactForm}>
-                        <Form.Control value={contactName} onChange={(e) => {setContactName(e.target.value)}} className={s.contactInput} placeholder="Ваше имя" />
-                        <Form.Control value={contactCompany} onChange={(e) => {setContactCompany(e.target.value)}} className={s.contactInput} type="phone" placeholder="Компания" />
-                        <Form.Control value={contactContact} onChange={(e) => {setContactContact(e.target.value)}} className={s.contactInput} type="mail" placeholder="Telegram, почта или телефон" />
-                        <Form.Control value={contactMessage} onChange={(e) => {setContactMessage(e.target.value)}} className={s.contactInput} placeholder="Опишите вашу задачу" />
-                        {contactSuccess && <p className={s.successContact} >{contactSuccess}</p>}
-                        {contactError && <p className={s.errorContact} >{contactError}</p>}
-                    </Form>
-                    <button className={s.sendButton} onClick={contactFormHandler}>Отправить</button>
+                    <div className={s.contactButtons}>
+                        <div className={s.buttonsRow}>
+                                    <a href="mailto:info@idp.by" className={s.mailButton}>info@idp.by</a>
+                                    <a href="https://t.me/ais4lifecom" target="_blank" className={s.telegramButton}><Telegram /></a>
+                        </div>
+                        <a href="tel:+375297944933" className={s.phoneButton}>+375 29 794-49-33</a>
+                    </div>
+                                     
                 </div>
             </div>
         </motion.div>
