@@ -1508,7 +1508,7 @@ button.burger{
         display: flex;
         width: 100vw;
         min-width: 100vw;
-        padding: 100px 0px;
+        padding: 120px 0px;
         margin: 0px;
         background: #121212;
         color: #FFFFFF;
@@ -1718,7 +1718,7 @@ button.burger{
         grid-template-columns: repeat(1, 1fr);
         column-gap: 34px;
         row-gap: 12px;
-        padding-bottom: 30px;
+        padding-bottom: 80px;
         width: 100%;
     }
     
@@ -1761,12 +1761,13 @@ button.burger{
         height: 160px;
         justify-content: center;
         align-items: center;
-        width: 76vw;
+        width: 100%;
     }
     
     .blancCard p{
-        width: 330px;
-        text-align: justify;
+        width: 100%;
+        text-align: left;
+        font-size: 26px;
         font-weight: 300;
     }
     
@@ -1801,7 +1802,7 @@ button.burger{
         padding: 0px;
         margin: 0px;
         text-transform: uppercase;
-        padding: 20px 0px 15px 0px;
+        padding: 30px 0px 30px 0px;
     }
     
     .imagesWrapper{
@@ -1811,8 +1812,8 @@ button.burger{
     }
     
     .image{
-        width: 180px;
-        height: 130px;
+        width: 260px;
+        height: 190px;
         border-radius: 12px;
         border: 1px solid #FFFFFF;
     }
@@ -1820,7 +1821,7 @@ button.burger{
     .solutionsGrid{
         display: flex;
         flex-direction: column;
-        margin-top: 80px;
+        margin-top: 40px;
         margin-bottom: 40px;
         gap: 0px;
     }
