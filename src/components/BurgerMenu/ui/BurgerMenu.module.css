@@ -1,0 +1,82 @@
+.BurgerMenu{
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    padding: 4vh 8vw 8vh 8vw;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(22px);
+    z-index: 9999;
+    top: 100%;
+    transition: 800ms;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.closeButton{
+    width: 60px;
+    height: 60px;
+    border-radius: 35px;
+    background: #FFFFFF;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.closeIcon{
+    width: 20px;
+    height: 20px;
+}
+
+.BurgerMenu.opened{
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    padding: 4vh 8vw 8vh 8vw;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    top: 0px;
+    left: 0;
+    transition: 500ms;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.navigationWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    width: 100%;
+}
+
+.navigationWrapper p{
+    margin: 0;
+    padding: 0;
+    font-size: 36px;
+    font-weight: 400;
+    color: #FFFFFF;
+
+}
+
+.navigation{
+    border-radius: 32px;
+    background: #FFFFFF;
+}
+
+.contactButton{
+    height: 80px;
+    width: 100%;
+    border-radius: 32px;
+    background: #007BFF;
+    border: none;
+    color: #FFFFFF;
+    font-size: 16px;
+    cursor: pointer;
+}

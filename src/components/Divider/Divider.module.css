@@ -42,3 +42,14 @@
     -ms-grid-column-align: auto;
     justify-self: auto;
 }
+
+
+@media screen and (max-width: 500px) {
+    .dividerGridVertical{
+        display: none;
+    }
+    .dividerGridHorizontal{
+        display: none;
+    }
+}
+    

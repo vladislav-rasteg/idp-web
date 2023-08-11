@@ -28,6 +28,7 @@ import DividerGridVertical from "../../components/Divider/DividerGridVertical"
 import DividerGridHorizontal from "../../components/Divider/DividerGridHorizontal"
 import ContactModal from "../../components/ContactModal/ContactModal"
 import useWindowDimensions from '../../hooks/useWindowDimensions';
+import { BurgerMenu } from "../../components/BurgerMenu"
  
 const MainPage = () => {
 
@@ -42,9 +43,11 @@ const MainPage = () => {
     const [showNavbar, setShowNavbar] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
 
+    const [showBurgerMenu, setShowBurgerMenu] = useState(false);
+
     const controlNavbar = () => {
         if (typeof window !== 'undefined') { 
-        if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
+        if (window.scrollY > lastScrollY && width && width > 500) { // if scroll down hide the navbar
             setShowNavbar(false); 
         } else { // if scroll up show the navbar
             setShowNavbar(true);  
@@ -77,6 +80,9 @@ const MainPage = () => {
         } else if (width && width > 1300){
             setMarginWidth(630)
             setContainerWidth(1290)
+        } else if (width && width < 501){
+            setMarginWidth(500)
+            setContainerWidth(92)
         }
     }, [width])
 
@@ -111,6 +117,14 @@ const MainPage = () => {
 
     return (
         <div className={s.page} ref={scrollingContainer}>
+            <BurgerMenu setIsOpen={setShowBurgerMenu} isOpen={showBurgerMenu} openContactModal={setShow}> 
+                <div className={s.burgerLinks}>
+                    <a href="#about" onClick={() => setShowBurgerMenu(false)}>О нас</a>
+                    <a href="#cards" onClick={() => setShowBurgerMenu(false)}>Отрасли</a>
+                    <a href="#solutions" onClick={() => setShowBurgerMenu(false)}>Решения</a>
+                    <a href="#services" onClick={() => setShowBurgerMenu(false)}>Услуги</a>
+                </div>
+            </BurgerMenu>
             <ContactModal show={show} onHide={setShow} />
             <div className={`${s.navbar} ${!showNavbar && s.navbarHide}`}>
                 <div className={s.navbarContent}>
@@ -129,9 +143,15 @@ const MainPage = () => {
                                 <a href="tel:+375297944933">+375 29 794-49-33</a>
                             </div>
                         </Reveal>
-                        <button onClick={() => setShow(true)}>Связаться</button>
+                        <button onClick={() => setShow(true)}>Обсудить проект</button>
                     </div>
+                    <button className={showBurgerMenu ? `${s.burger} ${s.expanded}` : s.burger} onClick={() => {setShowBurgerMenu(!showBurgerMenu)}}>
+                        <span className={s.bar_1}></span>
+                        <span className={s.bar_2}></span>
+                        <span className={s.bar_3}></span>
+                    </button>
                 </div>
+                
             </div>
             <div className={s.container}>
             </div>
@@ -149,7 +169,7 @@ const MainPage = () => {
                     
                     <motion.div 
                     initial={{opacity: 0, width: "0px"}}
-                    animate={{opacity: 1, width: `${containerWidth}px`}}
+                    animate={{opacity: 1, width: containerWidth != 92 ? `${containerWidth}px` : `${containerWidth}vw`}}
                     transition={{ duration: 0.7, delay: 0.8, ease: "easeOut" }}
                     className={s.videoWrapper}>
                         <video className={s.heroVideo} autoPlay={true} loop={true} controls={false} playsInline muted>
@@ -315,6 +335,7 @@ const MainPage = () => {
 
             <div className={s.greenContainer}>
                 <div className={s.greenBlock}>
+                    { width && width > 500 ?
                     <h1>
                     мы разрабатываем<br/>
                     сверхкачественные<br/>
@@ -322,6 +343,9 @@ const MainPage = () => {
                     выдержать любую<br/>
                     нагрузку
                     </h1>
+                    :
+                    <h1>мы создаем решения, способные выдержать любую нагрузку</h1>
+                }
 
                     <div className={s.alignRight}>
                         <p>
@@ -384,7 +408,7 @@ const MainPage = () => {
                     <h1 onClick={() => setShow(true)} >Связаться с нами</h1>
                 </Reveal>
                 <div className={s.footerContent}>
-                    <FooterLogo />
+                    <FooterLogo className={s.footerLogo} />
                     <div className={s.footerLinks}>
                         <a href="tel:+375297944933">+375 29 794-49-33</a>
                         <a href="mailto:info@idp.by">info@idp.by</a>

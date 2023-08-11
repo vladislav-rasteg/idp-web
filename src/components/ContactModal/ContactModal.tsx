@@ -5,6 +5,7 @@ import { ReactComponent as Telegram } from "./assets/telegram.svg";
 import {motion, useAnimation} from "framer-motion"
 import Form from 'react-bootstrap/Form';
 import axios from 'axios';
+import useWindowDimensions from "../../hooks/useWindowDimensions";
 
 
 interface Props {
@@ -20,6 +21,8 @@ const ContactModal = ({show, onHide}: Props) => {
     const [contactMessage, setContactMessage] = useState("")
     const [contactError, setContactError] = useState("")
     const [contactSuccess, setContactSuccess] = useState("")
+
+    const { height, width } = useWindowDimensions();
 
     const [style, setStyle] = useState(`${s.modal} ${s.hidden}`)
 
@@ -65,7 +68,22 @@ const ContactModal = ({show, onHide}: Props) => {
         transition={{ duration: 0.4, delay: 0, ease: "easeOut" }}
         >
             <div className={s.container}>
-                <button className={s.closeButton} onClick={() => onHide(false)}><Close /></button>
+                {
+                    width && width > 500
+                    ?
+                    <button className={s.closeButton} onClick={() => onHide(false)}><Close /></button>
+                    :
+                    <div className={s.mobileButtons}>
+                        <button className={s.closeButton} onClick={() => onHide(false)}><Close /></button>
+                        <div className={s.mobileButtonsRow}>
+                            <a href="mailto:info@idp.by" className={s.mailButton}>info@idp.by</a>
+                            <a href="https://t.me/ais4lifecom" target="_blank" className={s.telegramButton}><Telegram className={s.tgIcon} /></a>
+                        </div>
+                        
+                    </div>
+
+                }
+                
                 <div className={s.contentWrapper}>
                     <div className={s.content}>
                         <div className={s.heading}>

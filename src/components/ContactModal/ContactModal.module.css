@@ -222,3 +222,707 @@
 .hidden{
     display: none;
 }
+
+@media screen and (min-width: 1600px) {
+    .modal{
+        background: #121212;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        z-index: 9999;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        overflow: hidden;
+    }
+    
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 1430px;
+        gap: 42px;
+    }   
+    
+    .closeButton{
+        width: 70px;
+        height: 70px;
+        border: none;
+        border-radius: 35px;
+        background: #FFFFFF;
+        cursor: pointer;
+        transition: 300ms;
+    }
+    
+    .closeButton:hover{
+        transform: scale(1.1);
+        transition: 300ms;
+    }
+    
+    .contentWrapper{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+    }
+    
+    .content{
+        display: flex;
+        flex-direction: column;
+        gap: 56px;
+    }
+    
+    .heading{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .heading h1{
+        color: #FFF;
+        font-family: Stapel;
+        font-size: 120px;
+        font-style: normal;
+        font-weight: 400;
+        text-transform: uppercase;
+        padding: 0;
+    }
+    
+    .contactButtons{
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+    }
+    
+    .buttonsRow{
+        display: flex;
+        gap: 22px;
+        align-items: center;
+    }
+    
+    .mailButton{
+        display: flex;
+        height: 94px;
+        padding: 18px 84px;
+        border-radius: 30px;
+        border: 1px solid #FFF;
+        color: #FFF;
+        font-family: Inter;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 400;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: 300ms;
+    }
+    
+    .phoneButton{
+        display: flex;
+        width: 100%;
+        height: 94px;
+        padding: 18px 32px;
+        border-radius: 30px;
+        border: 1px solid #FFF;
+        color: #FFF;
+        font-family: Inter;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 400;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: 300ms;
+    }
+    
+    .phoneButton:hover{
+        transform: scale(1.1);
+        background: #FFFFFF;
+        color: #000000;
+        transition: 300ms;
+    }
+    
+    .mailButton:hover{
+        transform: scale(1.1);
+        background: #FFFFFF;
+        color: #000000;
+        transition: 300ms;
+    }
+    
+    .telegramButton{
+        display: flex;
+        height: 94px;
+        width: 94px;
+        border-radius: 30px;
+        border: 1px solid #FFF;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: 300ms;
+    }
+    
+    .telegramButton:hover{
+        transform: scale(1.1);
+        transition: 300ms;
+    }
+    
+    .sendButton{
+        display: flex;
+        width: 751px;
+        height: 90px;
+        padding: 32px 56px;
+        cursor: pointer;
+        background: #FFFFFF;
+        border-radius: 30px;
+        color: #000;
+        font-family: Inter;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        justify-content: center;
+        transition: 300ms;  
+    }
+    
+    .sendButton:hover{
+        transform: scale(1.1);
+        transition: 300ms;
+    }
+    
+    .contactForm{
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+        width: 751px;
+    }
+    
+    .contactInput{
+        display: flex;
+        width: 751px;
+        padding: 18px 0px;
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.40);
+        background: transparent;
+        color: #ffffff;
+        font-family: Inter;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+    }
+    
+    .contactInput:active{
+        outline: none;
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 1);
+    }
+    
+    .contactInput:focus{
+        outline: none;
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 1);
+    }
+    
+    .errorContact{
+        width: 100%;
+        padding: 8px 12px;
+        background: #FF2E47;
+        color: #FFFFFF;
+        border-radius: 8px;
+        font-size: 18px;
+      }
+      
+      .successContact{
+        width: 100%;
+        padding: 8px 12px;
+        background: #11D07C;
+        color: #FFFFFF;
+        border-radius: 8px;
+        font-size: 18px;
+      }
+    
+    
+    
+    .hidden{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1900px) {
+    .modal{
+        background: #121212;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        z-index: 9999;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        overflow: hidden;
+    }
+    
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 1720px;
+        gap: 42px;
+    }   
+    
+    .closeButton{
+        width: 80px;
+        height: 80px;
+        border: none;
+        border-radius: 40px;
+        background: #FFFFFF;
+        cursor: pointer;
+        transition: 300ms;
+    }
+    
+    .closeButton:hover{
+        transform: scale(1.1);
+        transition: 300ms;
+    }
+    
+    .contentWrapper{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+    }
+    
+    .content{
+        display: flex;
+        flex-direction: column;
+        gap: 56px;
+    }
+    
+    .heading{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .heading h1{
+        color: #FFF;
+        font-family: Stapel;
+        font-size: 140px;
+        font-style: normal;
+        font-weight: 400;
+        text-transform: uppercase;
+        padding: 0;
+    }
+    
+    .contactButtons{
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+    }
+    
+    .buttonsRow{
+        display: flex;
+        gap: 22px;
+        align-items: center;
+    }
+    
+    .mailButton{
+        display: flex;
+        height: 100px;
+        padding: 18px 160px;
+        border-radius: 30px;
+        border: 1px solid #FFF;
+        color: #FFF;
+        font-family: Inter;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 400;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: 300ms;
+    }
+    
+    .phoneButton{
+        display: flex;
+        width: 100%;
+        height: 100px;
+        padding: 18px 32px;
+        border-radius: 30px;
+        border: 1px solid #FFF;
+        color: #FFF;
+        font-family: Inter;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 400;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: 300ms;
+    }
+    
+    .phoneButton:hover{
+        transform: scale(1.06);
+        background: #FFFFFF;
+        color: #000000;
+        transition: 300ms;
+    }
+    
+    .mailButton:hover{
+        transform: scale(1.06);
+        background: #FFFFFF;
+        color: #000000;
+        transition: 300ms;
+    }
+    
+    .telegramButton{
+        display: flex;
+        height: 100px;
+        width: 100px;
+        border-radius: 30px;
+        border: 1px solid #FFF;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: 300ms;
+    }
+    
+    .telegramButton:hover{
+        transform: scale(1.06);
+        transition: 300ms;
+    }
+    
+    .sendButton{
+        display: flex;
+        width: 870px;
+        height: 100px;
+        align-items: center;
+        padding: 0px 56px;
+        cursor: pointer;
+        background: #FFFFFF;
+        border-radius: 40px;
+        color: #000;
+        font-family: Inter;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        justify-content: center;
+        transition: 300ms;  
+    }
+    
+    .sendButton:hover{
+        transform: scale(1.06);
+        transition: 300ms;
+    }
+    
+    .contactForm{
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+        width: 870px;
+    }
+    
+    .contactInput{
+        display: flex;
+        width: 870px;
+        padding: 18px 0px;
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.40);
+        background: transparent;
+        color: #ffffff;
+        font-family: Inter;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+    }
+    
+    .contactInput:active{
+        outline: none;
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 1);
+    }
+    
+    .contactInput:focus{
+        outline: none;
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 1);
+    }
+    
+    .errorContact{
+        width: 100%;
+        padding: 8px 12px;
+        background: #FF2E47;
+        color: #FFFFFF;
+        border-radius: 8px;
+        font-size: 18px;
+      }
+      
+      .successContact{
+        width: 100%;
+        padding: 8px 12px;
+        background: #11D07C;
+        color: #FFFFFF;
+        border-radius: 8px;
+        font-size: 18px;
+      }
+    
+    
+    
+    .hidden{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .modal{
+        background: #121212;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        z-index: 9999;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        overflow: hidden;
+    }
+    
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 92vw;
+        gap: 42px;
+        justify-content: space-between;
+    }   
+    
+    .closeButton{
+        width: 60px;
+        min-width: 60px;
+        height: 60px;
+        border: none;
+        border-radius: 30px;
+        background: #FFFFFF;
+        cursor: pointer;
+        transition: 300ms;
+    }
+    
+    .closeButton:hover{
+        transform: scale(1.1);
+        transition: 300ms;
+    }
+    
+    .contentWrapper{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+    
+    .content{
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        width: 100%;
+    }
+    
+    .heading{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .heading h1{
+        color: #FFF;
+        font-family: Stapel;
+        font-size: 46px;
+        font-style: normal;
+        font-weight: 400;
+        text-transform: uppercase;
+        padding: 0;
+    }
+
+    .mobileButtons{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .mobileButtonsRow{
+        display: flex;
+        gap: 8px;
+    }
+    
+    .contactButtons{
+        display: none;
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .buttonsRow{
+        display: flex;
+        gap: 12px;
+        align-items: center;
+    }
+    
+    .mailButton{
+        display: flex;
+        height: 60px;
+        padding: 18px 46px;
+        border-radius: 20px;
+        border: 1px solid #FFF;
+        color: #FFF;
+        font-family: Inter;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: 300ms;
+    }
+    
+    .phoneButton{
+        display: flex;
+        width: 100%;
+        height: 100px;
+        padding: 18px 32px;
+        border-radius: 30px;
+        border: 1px solid #FFF;
+        color: #FFF;
+        font-family: Inter;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 400;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: 300ms;
+    }
+    
+    .phoneButton:hover{
+        transform: scale(1.06);
+        background: #FFFFFF;
+        color: #000000;
+        transition: 300ms;
+    }
+    
+    .mailButton:hover{
+        transform: scale(1.06);
+        background: #FFFFFF;
+        color: #000000;
+        transition: 300ms;
+    }
+    
+    .telegramButton{
+        display: flex;
+        height: 60px;
+        width: 60px;
+        border-radius: 20px;
+        border: 1px solid #FFF;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: 300ms;
+    }
+
+    .tgIcon{
+        width: 24px;
+        height: auto;
+    }
+    
+    .telegramButton:hover{
+        transform: scale(1.06);
+        transition: 300ms;
+    }
+    
+    .sendButton{
+        display: flex;
+        width: 100%;
+        height: 80px;
+        align-items: center;
+        padding: 0px 56px;
+        cursor: pointer;
+        background: #FFFFFF;
+        border-radius: 30px;
+        color: #000;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        justify-content: center;
+        transition: 300ms;  
+    }
+    
+    .sendButton:hover{
+        transform: scale(1.06);
+        transition: 300ms;
+    }
+    
+    .contactForm{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+    
+    .contactInput{
+        display: flex;
+        width: 100%;
+        padding: 18px 0px;
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.40);
+        background: transparent;
+        color: #ffffff;
+        font-family: Inter;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+    }
+    
+    .contactInput:active{
+        outline: none;
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 1);
+    }
+    
+    .contactInput:focus{
+        outline: none;
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 1);
+    }
+    
+    .errorContact{
+        width: 100%;
+        padding: 8px 12px;
+        background: #FF2E47;
+        color: #FFFFFF;
+        border-radius: 8px;
+        font-size: 18px;
+      }
+      
+      .successContact{
+        width: 100%;
+        padding: 8px 12px;
+        background: #11D07C;
+        color: #FFFFFF;
+        border-radius: 8px;
+        font-size: 18px;
+      }
+    
+    
+    
+    .hidden{
+        display: none;
+    }
+}
+    
