@@ -94,7 +94,8 @@
 
 .phoneButton{
     display: flex;
-    width: 100%;
+    width: 432px;
+    text-align: center;
     height: 94px;
     padding: 18px 32px;
     border-radius: 30px;
@@ -108,6 +109,33 @@
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    transition: 300ms;
+}
+
+.addressButton{
+    display: flex;
+    width: 432px;
+    text-align: center;
+    height: 94px;
+    padding: 18px 32px;
+    border-radius: 30px;
+    border: 1px solid #FFF;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 300ms;
+}
+
+.addressButton:hover{
+    transform: scale(1.1);
+    background: #FFFFFF;
+    color: #000000;
     transition: 300ms;
 }
 
@@ -320,7 +348,7 @@
     
     .phoneButton{
         display: flex;
-        width: 100%;
+        width: 432px;
         height: 94px;
         padding: 18px 32px;
         border-radius: 30px;
@@ -328,6 +356,26 @@
         color: #FFF;
         font-family: Inter;
         font-size: 26px;
+        font-style: normal;
+        font-weight: 400;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: 300ms;
+    }
+
+    .addressButton{
+        display: flex;
+        width: 432px;
+        text-align: center;
+        height: 94px;
+        padding: 18px 32px;
+        border-radius: 30px;
+        border: 1px solid #FFF;
+        color: #FFF;
+        font-family: Inter;
+        font-size: 18px;
         font-style: normal;
         font-weight: 400;
         cursor: pointer;
@@ -536,6 +584,26 @@
         color: #FFF;
         font-family: Inter;
         font-size: 26px;
+        font-style: normal;
+        font-weight: 400;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: 300ms;
+    }
+
+    .addressButton{
+        display: flex;
+        width: 100%;
+        text-align: center;
+        height: 94px;
+        padding: 18px 32px;
+        border-radius: 30px;
+        border: 1px solid #FFF;
+        color: #FFF;
+        font-family: Inter;
+        font-size: 18px;
         font-style: normal;
         font-weight: 400;
         cursor: pointer;

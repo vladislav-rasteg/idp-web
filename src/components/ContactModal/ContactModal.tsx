@@ -105,6 +105,7 @@ const ContactModal = ({show, onHide}: Props) => {
                                     <a href="https://t.me/ais4lifecom" target="_blank" className={s.telegramButton}><Telegram /></a>
                         </div>
                         <a href="tel:+375297944933" className={s.phoneButton}>+375 29 794-49-33</a>
+                        <a href="https://yandex.ru/maps/-/C-bVUjB" target="_blank" className={s.addressButton}>Минск Проспект Победителей 7А, 9 этаж, офис 22</a>
                     </div>
                                      
                 </div>
