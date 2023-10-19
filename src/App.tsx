@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MainPage from './pages/MainPage/MainPage';
-import AboutPage from './pages/AboutPage/AboutPage';
+import BankingSolutionsPage from './pages/BankingSolutionsPage/BankingSolutionsPage';
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<MainPage />} />
-          <Route path='/about' element={<AboutPage />} />
+          <Route path='/banking_solutions' element={<BankingSolutionsPage />} />
         </Routes>
       </BrowserRouter>
     </div>

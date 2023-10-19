@@ -7,7 +7,6 @@ import { ReactComponent as Card3 } from './assets/card3.svg'
 import { ReactComponent as Card4 } from './assets/card4.svg'
 import { ReactComponent as Card5 } from './assets/card5.svg'
 import { ReactComponent as ScrollAnimated } from './assets/scrollAnimated.svg'
-import { ReactComponent as FooterLogo } from './assets/footerLogo.svg'
 import Img1 from './assets/img1.png'
 import Img2 from './assets/img2.png'
 import Img3 from './assets/img3.png'
@@ -29,10 +28,14 @@ import DividerGridHorizontal from "../../components/Divider/DividerGridHorizonta
 import ContactModal from "../../components/ContactModal/ContactModal"
 import useWindowDimensions from '../../hooks/useWindowDimensions';
 import { BurgerMenu } from "../../components/BurgerMenu"
+import { Footer } from "../../components/Footer/Footer"
+import { useNavigate } from "react-router-dom";
  
 const MainPage = () => {
 
     const { height, width } = useWindowDimensions();
+
+    const navigate = useNavigate();
 
     const ref = useRef<HTMLDivElement>(null)
     const secondRef = useRef<HTMLDivElement>(null)
@@ -203,7 +206,7 @@ const MainPage = () => {
                     
                     <div className={s.cards}>
                         <Reveal>
-                            <div className={s.card}>
+                            <div className={s.card} onClick={() => navigate("banking_solutions")}>
                                 <div className={s.cardContent}>
                                     <Card1 className={s.cardImg} />
                                     <h2>банковский<br/>и финансовый<br/>сектор</h2>
@@ -402,27 +405,7 @@ const MainPage = () => {
                     <button onClick={() => setShow(true)} className={s.fullWidthButton}>Связаться с нами</button>
                 </div>
             </div>
-            <div className={s.container}>
-             <div className={s.footer}>
-                <Reveal>
-                    <h1 onClick={() => setShow(true)} >Связаться с нами</h1>
-                </Reveal>
-                <div className={s.footerContent}>
-                    <FooterLogo className={s.footerLogo} />
-                    <div className={s.footerLinks}>
-                        <a href="tel:+375297944933">+375 29 794-49-33</a>
-                        <a href="mailto:info@idp.by">info@idp.by</a>
-                    </div>
-                    <div className={s.footerLinks}>
-                        <a href="#about">О нас</a>
-                        <a href="#cards">Отрасли</a>
-                        <a href="#solutions">Решения</a>
-                        <a href="#services">Услуги</a>
-                    </div>
-
-                </div>
-             </div>
-            </div>
+            <Footer showModal={setShow}/>
         </div>
         
     )

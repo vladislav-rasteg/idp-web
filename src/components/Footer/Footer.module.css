@@ -1,0 +1,153 @@
+.footer{
+    display: flex;
+    padding: 120px 0px 120px 0px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: #FFFFFF;
+}
+
+.footerContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    width: 1290px;
+    min-width: 1290px;
+}
+
+.footer h1{
+    cursor: pointer;
+    color: #1C1C1E;
+    font-family: Stapel;
+    font-size: 120px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 123px */
+    text-transform: uppercase;
+    transition: 300ms;
+}
+
+.footer h1:hover{
+    transform: scale(1.05);
+    transition: 300ms;
+}
+
+.footerContent{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footerLinks{
+    display: flex;
+    gap: 46px;
+    font-size: 22px;
+}
+
+.footerLinks a{
+    cursor: pointer;
+    text-decoration: none;
+    color: #000000;
+}
+
+@media screen and (min-width: 1600px) {
+    .footerContainer{
+        width: 1430px;
+        min-width: 1430px;
+    }
+
+    .footer h1{
+        cursor: pointer;
+        color: #1C1C1E;
+        font-family: Stapel;
+        font-size: 134px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%; /* 123px */
+        text-transform: uppercase;
+        transition: 300ms;
+    }
+}
+
+@media screen and (min-width: 1900px) {
+
+    .footerContainer{
+        width: 1720px;
+        min-width: 1720px;
+    }
+
+    .footer h1{
+        cursor: pointer;
+        color: #1C1C1E;
+        font-family: Stapel;
+        font-size: 162px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%; /* 123px */
+        text-transform: uppercase;
+        transition: 300ms;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .footerContainer{
+        width: 92vw;
+        min-width: 92vw;
+    }
+
+    .footer{
+        padding: 80px 0px 80px 0px;
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        width: 100%;
+    }
+    
+    .footer h1{
+        display: none;
+        cursor: pointer;
+        color: #1C1C1E;
+        font-family: Stapel;
+        font-size: 120px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%; /* 123px */
+        text-transform: uppercase;
+        transition: 300ms;
+    }
+    
+    .footer h1:hover{
+        transform: scale(1.05);
+        transition: 300ms;
+    }
+    
+    .footerContent{
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        justify-content: start;
+        align-items: start;
+        gap: 22px;
+    }
+
+    .footerLogo{
+        margin-top: 40px;
+    }
+    
+    .footerLinks{
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+        font-size: 22px;
+        text-align: left;
+        width: 100%;
+    }
+    
+    .footerLinks a{
+        cursor: pointer;
+        text-decoration: none;
+        color: #000000;
+    }
+}

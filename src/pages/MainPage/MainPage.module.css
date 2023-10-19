@@ -116,6 +116,7 @@ button.burger{
 .logo{
     width: 82px;
     height: auto;
+    fill: #000000 !important;
 }
 
 .navbarLinks{
@@ -477,51 +478,6 @@ button.burger{
     gap: 32px;
 }
 
-.footer{
-    padding: 120px 0px 120px 0px;
-    display: flex;
-    flex-direction: column;
-    gap: 100px;
-    width: 100%;
-}
-
-.footer h1{
-    cursor: pointer;
-    color: #1C1C1E;
-    font-family: Stapel;
-    font-size: 120px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 100%; /* 123px */
-    text-transform: uppercase;
-    transition: 300ms;
-}
-
-.footer h1:hover{
-    transform: scale(1.05);
-    transition: 300ms;
-}
-
-.footerContent{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footerLinks{
-    display: flex;
-    gap: 46px;
-    font-size: 22px;
-}
-
-.footerLinks a{
-    cursor: pointer;
-    text-decoration: none;
-    color: #000000;
-}
-
 
 
 
@@ -588,6 +544,7 @@ button.burger{
     .logo{
         width: 82px;
         height: auto;
+        fill: #000000 !important;
     }
     
     .navbarLinks{
@@ -1037,6 +994,7 @@ button.burger{
     .logo{
         width: 82px;
         height: auto;
+        fill: #000000 !important;
     }
     
     .navbarLinks{
@@ -1457,7 +1415,7 @@ button.burger{
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
     .greenBlock{
         display: flex;
         flex-direction: column;
@@ -1525,6 +1483,7 @@ button.burger{
     .logo{
         width: 82px;
         height: auto;
+        fill: #000000 !important;
     }
     
     .navbarLinks{
