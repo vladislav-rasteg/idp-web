@@ -1,0 +1,199 @@
+.page_wrapper{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background: #121212;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding-top: 120px;
+    padding-bottom: 40px;
+}
+
+button.burger {
+    display: none;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 1290px;
+    min-width: 1290px;
+    padding: 0px;
+    margin: 0px;
+    gap: 76px;
+  }
+  
+  .navbar {
+    display: flex;
+    width: 100vw;
+    position: fixed;
+    height: 80px;
+    justify-content: center;
+    background: transparent;
+    z-index: 100;
+    top: 0;
+    transition: 300ms;
+  }
+  
+  .navbarHide {
+    top: -80px;
+    transition: 300ms;
+  }
+  
+  .navbarContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1290px;
+    align-items: center;
+    border-bottom: 1px solid #ffffff;
+  }
+  
+  .logo {
+    width: 82px;
+    height: auto;
+    fill: #ffffff !important;
+  }
+  
+  .navbarLinks {
+    display: flex;
+    gap: 32px;
+  }
+  
+  .navbarLinks a {
+    font-size: 16px;
+    text-decoration: none;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 300ms;
+  }
+  
+  .navbarLinks a:hover {
+    margin-top: -4px;
+    transition: 300ms;
+  }
+  
+  .navbar button {
+    padding: 16px 32px;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 400;
+    border: 1px solid #ffffff;
+    border-radius: 12px;
+    transition: 300ms;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  
+  .navbar button:hover {
+    background: #ffffff;
+    color: #000000;
+    transition: 300ms;
+  }
+  
+  .headerLogo{
+    cursor: pointer;
+  }
+  
+  .phoneButton {
+    display: flex;
+    gap: 22px;
+    align-items: center;
+  }
+  
+  .headingWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .lineWrapper {
+    overflow: hidden;
+  }
+  
+  .heading {
+    font-family: "Stapel";
+    font-size: 80px;
+    font-weight: 300;
+    padding: 0px;
+    margin: 0px;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+
+.cases_lsit{
+    width: 1290px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 22px;
+    row-gap: 40px;
+}
+
+.case_image_wrapper{
+    display: flex;
+    width: 100%;
+    aspect-ratio: 638 / 500;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.case{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.case:hover img{
+    transform: scale(1.05);
+}
+
+.case p{
+    color: #FFFFFF;
+    font-size: 22px;
+}
+
+.case img{
+    width: 100%;
+    height: auto;
+    transition: 300ms;
+    pointer-events: none;
+}
+
+.back_button_wrapper{
+    display: flex;
+    width: 1290px;
+    justify-content: start;
+}
+
+.back_button{
+    display: flex;
+    padding: 12px 32px;
+    border-radius: 8px;
+    color: #FFFFFF;
+    border: 1px solid rgba(255,255,255,0.6);
+    transition: 300ms;
+    opacity: 0.6;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.back_button:hover{
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.case_container{
+    display: flex;
+    flex-direction: column;
+    width: 1290px;
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.case_container img{
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+}
