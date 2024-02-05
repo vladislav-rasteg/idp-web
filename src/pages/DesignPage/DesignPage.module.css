@@ -195,5 +195,5 @@ button.burger {
 .case_container img{
     width: 100%;
     height: auto;
-    pointer-events: none;
+    pointer-events: none  ;
 }
